@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {QuestionComponent} from './question/question.component'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
