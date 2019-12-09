@@ -15,16 +15,13 @@ export class ApiService {
 
     postQuestion(question){
         this.http.post('http://localhost:54371/api/questions', question).subscribe(res => {
-            console.log(res);
         })
     }
 
     putQuestion(question){
         this.http.put(`http://localhost:54371/api/questions/${question.id}`, question).subscribe(res => {
-            console.log(res);
         })
     }
-
 
     getQuestions(quizId){
         return this.http.get(`http://localhost:54371/api/questions/${quizId}`);
@@ -32,6 +29,10 @@ export class ApiService {
 
     getQuizzes(){
         return this.http.get('http://localhost:54371/api/quizzes');
+    }
+
+    getAllQuizzes(){
+        return this.http.get('http://localhost:54371/api/quizzes/all');
     }
 
     selectQuestion(question){
@@ -44,13 +45,11 @@ export class ApiService {
 
     postQuiz(quiz){
         this.http.post('http://localhost:54371/api/quizzes', quiz).subscribe(res => {
-            console.log(res);
         })
     }
 
     putQuiz(quiz){
         this.http.put(`http://localhost:54371/api/quizzes/${quiz.id}`, quiz).subscribe(res => {
-            console.log(res);
         })
     }
 }
